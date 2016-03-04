@@ -21,6 +21,7 @@ import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -39,11 +40,11 @@ public class ShowHabitActivity extends ReplayableActivity
 
         Uri data = getIntent().getData();
         habit = Habit.get(ContentUris.parseId(data));
-        getActionBar().setTitle(habit.name);
-
-        if (android.os.Build.VERSION.SDK_INT >= 21)
+        ActionBar supportActionBar = getSupportActionBar();
+        if(supportActionBar != null)
         {
-            getActionBar().setBackgroundDrawable(new ColorDrawable(habit.color));
+            supportActionBar.setTitle(habit.name);
+            supportActionBar.setBackgroundDrawable(new ColorDrawable(habit.color));
         }
 
         setContentView(R.layout.show_habit_activity);

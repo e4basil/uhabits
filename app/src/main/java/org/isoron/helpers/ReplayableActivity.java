@@ -16,17 +16,17 @@
 
 package org.isoron.helpers;
 
-import android.app.Activity;
 import android.app.backup.BackupManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import org.isoron.uhabits.R;
 
 import java.util.LinkedList;
 
-abstract public class ReplayableActivity extends Activity
+abstract public class ReplayableActivity extends AppCompatActivity
 {
     private static int MAX_UNDO_LEVEL = 15;
 
