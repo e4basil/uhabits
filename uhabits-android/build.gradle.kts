@@ -111,7 +111,7 @@ dependencies {
     androidTestImplementation("androidx.test:rules:1.5.0")
     androidTestImplementation("org.mockito.kotlin:mockito-kotlin:5.1.0")
     compileOnly("javax.annotation:jsr250-api:1.0")
-    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.3")
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
     implementation("com.github.AppIntro:AppIntro:6.2.0")
     implementation("com.google.code.findbugs:jsr305:3.0.2")
     implementation("com.google.dagger:dagger:$daggerVersion")
